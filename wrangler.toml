@@ -12,4 +12,4 @@ directory = "./public"
 # to the public R2 URL, e.g.:
 #   https://pub-xxxxx.r2.dev/RongBao_Product_Catalog_2026.pdf
 [vars]
-PDF_URL = "REPLACE_WITH_R2_PDF_URL"
+PDF_URL = "https://pub-4d91ccf3b41948f7b2a9e3c3369ded0a.r2.dev/RongBao_Product_Catalog_2026.pdf"
