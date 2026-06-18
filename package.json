@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "wrangler": "^4"
+  },
+  "name": "rongbao-catalog-site",
+  "private": true,
+  "scripts": {
+    "deploy": "npx wrangler deploy",
+    "dev": "npx wrangler dev",
+    "preview": "npx wrangler dev --remote"
+  },
+  "version": "1.0.0"
+}

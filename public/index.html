@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,nofollow">
+  <title>RongBao LLC — Premium Product Catalog 2026</title>
+  <meta name="description" content="RongBao LLC Premium Product Catalog — Bird's Nest, Ginseng, Dried Seafood, Herbal Ingredients & Specialty Products">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #1F3A5F;
+      --gold: #C9A24B;
+      --gray: #4A4A4A;
+      --light: #F7F5F0;
+      --white: #FFFFFF;
+      --font: 'Segoe UI', 'Helvetica Neue', 'Noto Sans CJK SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font);
+      color: var(--gray);
+      background: var(--white);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--navy); text-decoration: none; }
+    a:hover { color: var(--gold); }
+
+    .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+
+    /* ── Header ── */
+    header {
+      background: var(--navy);
+      color: var(--white);
+      text-align: center;
+      padding: 28px 24px 20px;
+    }
+    header .brand-en { font-size: 1.4rem; font-weight: 700; letter-spacing: .04em; }
+    header .brand-zh { font-size: 1.15rem; opacity: .85; margin-top: 2px; }
+    header .tagline { font-size: .85rem; opacity: .7; margin-top: 6px; letter-spacing: .08em; text-transform: uppercase; }
+
+    /* ── Hero ── */
+    .hero {
+      background: linear-gradient(160deg, var(--navy) 0%, #2a4f7a 100%);
+      color: var(--white);
+      text-align: center;
+      padding: 56px 24px 48px;
+    }
+    .hero h1 { font-size: 2.4rem; font-weight: 700; line-height: 1.2; }
+    .hero h2 { font-size: 1.6rem; font-weight: 600; margin-top: 8px; opacity: .9; }
+    .hero .subtitle {
+      font-size: 1rem;
+      margin-top: 16px;
+      opacity: .8;
+      max-width: 640px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .hero .subtitle span { display: block; }
+    .hero .edition {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--white);
+      font-weight: 700;
+      font-size: .85rem;
+      padding: 4px 16px;
+      margin-top: 20px;
+      border-radius: 3px;
+      letter-spacing: .05em;
+    }
+
+    /* ── Buttons ── */
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+      padding: 36px 24px;
+      background: var(--light);
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border-radius: 6px;
+      font-size: .95rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform .15s, box-shadow .15s;
+    }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 4px 14px rgba(0,0,0,.12); color: var(--white); }
+    .btn-primary { background: var(--navy); color: var(--white); }
+    .btn-primary:hover { background: #2a4f7a; }
+    .btn-secondary { background: var(--gold); color: var(--white); }
+    .btn-secondary:hover { background: #b8913f; }
+    .btn-outline { background: transparent; color: var(--navy); border: 2px solid var(--navy); }
+    .btn-outline:hover { background: var(--navy); color: var(--white); }
+
+    /* ── Product Showcase (Carousels) ── */
+    .showcase { padding: 48px 0 40px; }
+
+    .showcase > h3 {
+      text-align: center;
+      font-size: 1.4rem;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+    .showcase > .sub {
+      text-align: center;
+      font-size: .9rem;
+      opacity: .65;
+      margin-bottom: 32px;
+    }
+
+    .category-row {
+      margin-bottom: 36px;
+    }
+    .category-row:last-child { margin-bottom: 0; }
+
+    .category-header {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      padding: 0 24px;
+      margin-bottom: 12px;
+    }
+    .category-header .cat-en {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--navy);
+    }
+    .category-header .cat-zh {
+      font-size: .9rem;
+      color: var(--gray);
+      opacity: .7;
+    }
+    .category-header .cat-count {
+      font-size: .75rem;
+      color: var(--gold);
+      font-weight: 600;
+      margin-left: auto;
+    }
+
+    .scroll-wrapper {
+      overflow-x: auto;
+      scrollbar-width: thin;
+      scrollbar-color: var(--gold) transparent;
+      padding-bottom: 8px;
+      -webkit-overflow-scrolling: touch;
+    }
+    .scroll-wrapper::-webkit-scrollbar {
+      height: 5px;
+    }
+    .scroll-wrapper::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    .scroll-wrapper::-webkit-scrollbar-thumb {
+      background: var(--gold);
+      border-radius: 3px;
+    }
+
+    .scroll-row {
+      display: flex;
+      gap: 10px;
+      padding: 0 24px;
+      width: max-content;
+    }
+
+    .scroll-row .item {
+      flex: 0 0 auto;
+      width: 180px;
+      cursor: pointer;
+    }
+    .scroll-row .item img {
+      width: 180px;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 6px;
+      display: block;
+      border: 1px solid #e5e2db;
+      transition: box-shadow .2s, transform .15s;
+    }
+    .scroll-row .item:hover img {
+      box-shadow: 0 6px 20px rgba(31,58,95,.18);
+      transform: translateY(-2px);
+    }
+
+    /* ── Categories ── */
+    .categories {
+      padding: 48px 24px;
+      background: var(--light);
+    }
+    .categories h3 {
+      text-align: center;
+      font-size: 1.3rem;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+    .categories .section-sub {
+      text-align: center;
+      font-size: .95rem;
+      opacity: .7;
+      margin-bottom: 28px;
+    }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 18px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .card {
+      background: var(--white);
+      border-radius: 8px;
+      padding: 22px 20px;
+      border: 1px solid #e5e2db;
+      transition: box-shadow .2s, transform .15s;
+    }
+    .card:hover { box-shadow: 0 6px 20px rgba(31,58,95,.1); transform: translateY(-2px); }
+    .card .num { display: inline-block; font-size: .75rem; font-weight: 700; color: var(--gold); margin-bottom: 8px; letter-spacing: .1em; }
+    .card .name-en { font-size: 1.05rem; font-weight: 700; color: var(--navy); }
+    .card .name-zh { font-size: .95rem; color: var(--gray); margin-top: 2px; }
+
+    /* ── Contact ── */
+    .contact { padding: 48px 24px; text-align: center; }
+    .contact h3 { font-size: 1.3rem; color: var(--navy); margin-bottom: 4px; }
+    .contact .company-zh { font-size: 1.1rem; opacity: .8; margin-bottom: 20px; }
+    .contact .info { font-size: .95rem; line-height: 1.9; }
+    .contact .note { margin-top: 18px; font-size: .88rem; opacity: .7; font-style: italic; }
+    .contact .note span { display: block; }
+
+    /* ── QR ── */
+    .qr-section {
+      padding: 48px 24px;
+      background: var(--light);
+      text-align: center;
+    }
+    .qr-section h3 { font-size: 1.3rem; color: var(--navy); margin-bottom: 4px; }
+    .qr-section .qr-sub { font-size: .95rem; opacity: .7; margin-bottom: 24px; }
+    .qr-frame {
+      display: inline-block;
+      background: var(--white);
+      padding: 16px;
+      border-radius: 8px;
+      border: 1px solid #e5e2db;
+    }
+    .qr-frame img { width: 180px; height: 180px; display: block; }
+    .qr-label { margin-top: 12px; font-size: .9rem; color: var(--gray); }
+    .qr-label span { display: block; }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--navy);
+      color: rgba(255,255,255,.6);
+      text-align: center;
+      padding: 20px 24px;
+      font-size: .82rem;
+    }
+
+    /* ── Lightbox ── */
+    #lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(10, 10, 10, .92);
+      align-items: center;
+      justify-content: center;
+      cursor: zoom-out;
+    }
+    #lightbox.active { display: flex; }
+    #lightbox img {
+      max-width: 92vw;
+      max-height: 92vh;
+      object-fit: contain;
+      border-radius: 4px;
+      box-shadow: 0 8px 40px rgba(0,0,0,.5);
+      cursor: default;
+    }
+    #lightbox-close {
+      position: absolute;
+      top: 18px;
+      right: 24px;
+      color: rgba(255,255,255,.7);
+      font-size: 2rem;
+      font-weight: 300;
+      cursor: pointer;
+      line-height: 1;
+      user-select: none;
+    }
+    #lightbox-close:hover { color: #fff; }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 1.7rem; }
+      .hero h2 { font-size: 1.2rem; }
+      .actions { flex-direction: column; align-items: stretch; }
+      .btn { justify-content: center; }
+      .card-grid { grid-template-columns: 1fr 1fr; }
+      .scroll-row .item { width: 140px; }
+      .scroll-row .item img { width: 140px; height: 186px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ════ Header ════ -->
+  <header>
+    <img src="assets/logo.png" alt="Nature Nest Logo" style="height:56px;margin-bottom:10px;">
+    <div class="brand-en">RONGBAO LLC</div>
+    <div class="brand-zh">龍寶國際有限公司</div>
+    <div class="tagline">Product Catalog / 產品圖冊</div>
+  </header>
+
+  <!-- ════ Hero ════ -->
+  <section class="hero">
+    <h1>Premium Product Catalog</h1>
+    <h2>參茸海味產品圖冊</h2>
+    <div class="subtitle">
+      <span>Bird's Nest, Ginseng, Dried Seafood, Herbal Ingredients & Specialty Products</span>
+      <span>燕窩、參茸、海味乾貨、湯料及特色產品</span>
+    </div>
+    <div class="edition">2026 Edition</div>
+  </section>
+
+  <!-- ════ Action Buttons ════ -->
+  <section class="actions">
+    <a href="#showcase" class="btn btn-primary">📖 View Products</a>
+    <a href="/pdf" download class="btn btn-secondary">⬇ Download PDF</a>
+    <a href="#contact" class="btn btn-outline">📞 Contact Us</a>
+  </section>
+
+  <!-- ════ Product Showcase ════ -->
+  <section class="showcase" id="showcase">
+    <h3>Product Showcase / 產品展示</h3>
+    <p class="sub">Click any image to enlarge / 點擊任何圖片可放大</p>
+
+    <div class="category-row" id="showcase-birds-nest">
+      <div class="category-header">
+        <span class="cat-en">Bird's Nest</span>
+        <span class="cat-zh">燕窩系列</span>
+        <span class="cat-count">8 items</span>
+      </div>
+      <div class="scroll-wrapper">
+        <div class="scroll-row" id="row-birds-nest"></div>
+      </div>
+    </div>
+
+    <div class="category-row" id="showcase-dried-seafood">
+      <div class="category-header">
+        <span class="cat-en">Dried Seafood</span>
+        <span class="cat-zh">海味乾貨</span>
+        <span class="cat-count">9 items</span>
+      </div>
+      <div class="scroll-wrapper">
+        <div class="scroll-row" id="row-dried-seafood"></div>
+      </div>
+    </div>
+
+    <div class="category-row" id="showcase-ginseng-roots">
+      <div class="category-header">
+        <span class="cat-en">Ginseng & Tonic Roots</span>
+        <span class="cat-zh">參茸保健</span>
+        <span class="cat-count">12 items</span>
+      </div>
+      <div class="scroll-wrapper">
+        <div class="scroll-row" id="row-ginseng-roots"></div>
+      </div>
+    </div>
+
+    <div class="category-row" id="showcase-mushrooms">
+      <div class="category-header">
+        <span class="cat-en">Mushrooms & Fungus</span>
+        <span class="cat-zh">菇菌類</span>
+        <span class="cat-count">7 items</span>
+      </div>
+      <div class="scroll-wrapper">
+        <div class="scroll-row" id="row-mushrooms"></div>
+      </div>
+    </div>
+
+    <div class="category-row" id="showcase-sweet-soup">
+      <div class="category-header">
+        <span class="cat-en">Sweet Soup & Dessert</span>
+        <span class="cat-zh">甜湯糖水食材</span>
+        <span class="cat-count">11 items</span>
+      </div>
+      <div class="scroll-wrapper">
+        <div class="scroll-row" id="row-sweet-soup"></div>
+      </div>
+    </div>
+
+    <div class="category-row" id="showcase-tea-drinks">
+      <div class="category-header">
+        <span class="cat-en">Tea & Herbal Drinks</span>
+        <span class="cat-zh">茶飲材料</span>
+        <span class="cat-count">4 items</span>
+      </div>
+      <div class="scroll-wrapper">
+        <div class="scroll-row" id="row-tea-drinks"></div>
+      </div>
+    </div>
+
+    <div class="category-row" id="showcase-snacks-topicals">
+      <div class="category-header">
+        <span class="cat-en">Snacks & Topicals</span>
+        <span class="cat-zh">零食 · 外用</span>
+        <span class="cat-count">8 items</span>
+      </div>
+      <div class="scroll-wrapper">
+        <div class="scroll-row" id="row-snacks-topicals"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ Product Categories ════ -->
+  <section class="categories" id="categories">
+    <h3>Product Categories / 產品類別</h3>
+    <div class="section-sub">7 categories of premium products / 七大類優質產品</div>
+    <div class="card-grid">
+      <div class="card">
+        <div class="num">SECTION 1</div>
+        <div class="name-en">Bird's Nest</div>
+        <div class="name-zh">燕窩系列</div>
+      </div>
+      <div class="card">
+        <div class="num">SECTION 2</div>
+        <div class="name-en">Dried Seafood</div>
+        <div class="name-zh">海味乾貨</div>
+      </div>
+      <div class="card">
+        <div class="num">SECTION 3</div>
+        <div class="name-en">Ginseng & Tonic Roots</div>
+        <div class="name-zh">參茸保健</div>
+      </div>
+      <div class="card">
+        <div class="num">SECTION 4</div>
+        <div class="name-en">Mushrooms & Fungus</div>
+        <div class="name-zh">菇菌類</div>
+      </div>
+      <div class="card">
+        <div class="num">SECTION 5</div>
+        <div class="name-en">Sweet Soup & Dessert</div>
+        <div class="name-zh">甜湯糖水食材</div>
+      </div>
+      <div class="card">
+        <div class="num">SECTION 6</div>
+        <div class="name-en">Tea & Herbal Drinks</div>
+        <div class="name-zh">茶飲材料</div>
+      </div>
+      <div class="card">
+        <div class="num">SECTION 7</div>
+        <div class="name-en">Snacks & Topicals</div>
+        <div class="name-zh">零食 · 外用</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ Contact ════ -->
+  <section class="contact" id="contact">
+    <h3>Contact Sales / 銷售聯繫</h3>
+    <div class="company-zh">聯繫人：Rong 先生</div>
+    <div class="info">
+      RongBao LLC<br>
+      118-12 29th Avenue, Flushing, NY 11354<br>
+      Cell: 646-462-8019<br>
+      Email: rongbao123rong@myyahoo.com
+    </div>
+    <div class="note">
+      <span>For wholesale and retail inquiries, please contact Rong directly.</span>
+      <span>批發及零售諮詢，請直接聯繫 Rong 先生。</span>
+    </div>
+  </section>
+
+  <!-- ════ WeChat QR ════ -->
+  <section class="qr-section" id="wechat-qr">
+    <h3>WeChat / 微信聯繫</h3>
+    <div class="qr-sub">Scan to add Rong on WeChat / 掃碼添加 Rong 微信</div>
+    <div class="qr-frame">
+      <img src="assets/wechat-qr.png" alt="WeChat QR Code — scan to add Rong">
+      <div class="qr-label">
+        <span>Rong's WeChat</span>
+        <span>Rong 的微信</span>
+      </div>
+    </div>
+    <p style="margin-top:18px;font-size:.82rem;opacity:.55;">WeChat QR code — scan to add Rong on WeChat.</p>
+  </section>
+
+  <!-- ════ WhatsApp QR ════ -->
+  <section class="qr-section" id="whatsapp-qr">
+    <h3>WhatsApp / WhatsApp聯繫</h3>
+    <div class="qr-sub">Scan to message Rong on WhatsApp / 掃碼發送 WhatsApp 訊息給 Rong</div>
+    <div class="qr-frame">
+      <img src="assets/whatsapp-qr.png" alt="WhatsApp QR Code — scan to message Rong">
+      <div class="qr-label">
+        <span>Rong's WhatsApp</span>
+        <span>Rong 的 WhatsApp</span>
+      </div>
+    </div>
+    <p style="margin-top:18px;font-size:.82rem;opacity:.55;">WhatsApp QR code — scan to message Rong directly.</p>
+  </section>
+
+  <!-- ════ Footer ════ -->
+  <footer>
+    <p>&copy; 2026 RongBao LLC / 龍寶國際有限公司 &nbsp;·&nbsp; For customer reference only / 僅供客戶參考</p>
+  </footer>
+
+  <!-- ════ Lightbox ════ -->
+  <div id="lightbox" role="dialog" aria-modal="true">
+    <span id="lightbox-close" aria-label="Close">&times;</span>
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <!-- ════ Product Carousel Data ════ -->
+  <script>
+    const CAROUSEL_ROOT = 'assets/carousel';
+    const CATEGORIES = [
+      { id: 'birds-nest',      row: 'row-birds-nest' },
+      { id: 'dried-seafood',   row: 'row-dried-seafood' },
+      { id: 'ginseng-roots',   row: 'row-ginseng-roots' },
+      { id: 'mushrooms',       row: 'row-mushrooms' },
+      { id: 'sweet-soup',      row: 'row-sweet-soup' },
+      { id: 'tea-drinks',      row: 'row-tea-drinks' },
+      { id: 'snacks-topicals', row: 'row-snacks-topicals' },
+    ];
+
+    const PRODUCTS = {
+      'birds-nest':      ['IMG_4798.jpg','IMG_4795.jpg','IMG_4625.jpg','IMG_4605.jpg','IMG_4603.jpg','IMG_4600.jpg','IMG_4598.jpg','IMG_4596.jpg'],
+      'dried-seafood':   ['IMG_4735.jpg','IMG_4714.jpg','IMG_4696.jpg','IMG_4695.jpg','IMG_4694.jpg','64.jpg','59.jpg','58.jpg','52.jpg'],
+      'ginseng-roots':   ['IMG_4691.jpg','IMG_4687.jpg','IMG_4679.jpg','IMG_4678.jpg','IMG_4676.jpg','IMG_4668.jpg','IMG_4666.jpg','IMG_4650.jpg','IMG_0392.jpg','56.jpg','55.jpg','54.jpg'],
+      'mushrooms':       ['IMG_4729.jpg','IMG_4716.jpg','IMG_4715.jpg','IMG_4675.jpg','IMG_4659.jpg','IMG_4652.jpg','IMG_0389.jpg'],
+      'sweet-soup':      ['IMG_4684.jpg','IMG_4681.jpg','IMG_4671.jpg','IMG_4670.jpg','IMG_4667.jpg','IMG_4663.jpg','IMG_4662.jpg','IMG_4661.jpg','IMG_4660.jpg','IMG_4651.jpg','63.jpg'],
+      'tea-drinks':      ['IMG_4673.jpg','IMG_4669.jpg','IMG_4664.jpg','IMG_4658.jpg'],
+      'snacks-topicals': ['IMG_4731.jpg','IMG_4730.jpg','IMG_4689.jpg','IMG_4657.jpg','IMG_4656.jpg','IMG_4655.jpg','IMG_4654.jpg','IMG_4653.jpg'],
+    };
+
+    for (const cat of CATEGORIES) {
+      const row = document.getElementById(cat.row);
+      if (!row) continue;
+      const images = PRODUCTS[cat.id] || [];
+      for (const img of images) {
+        const item = document.createElement('div');
+        item.className = 'item';
+
+        const el = document.createElement('img');
+        el.src = `${CAROUSEL_ROOT}/${img}`;
+        el.alt = '';
+        el.loading = 'lazy';
+        el.dataset.full = `${CAROUSEL_ROOT}/${img}`;
+
+        el.addEventListener('click', () => openLightbox(el.dataset.full));
+        item.appendChild(el);
+        row.appendChild(item);
+      }
+    }
+
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxClose = document.getElementById('lightbox-close');
+
+    function openLightbox(src) {
+      lightboxImg.src = src;
+      lightbox.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('active');
+      lightboxImg.src = '';
+      document.body.style.overflow = '';
+    }
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    lightboxClose.addEventListener('click', closeLightbox);
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+        closeLightbox();
+      }
+    });
+  </script>
+
+</body>
+</html>

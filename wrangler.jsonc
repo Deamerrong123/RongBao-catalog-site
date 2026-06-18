@@ -1,0 +1,15 @@
+name = "rongbao-catalog-site"
+main = "src/index.js"
+compatibility_date = "2026-06-01"
+
+# ── Static Assets ──
+# Serves everything in public/ as static files
+[assets]
+directory = "./public"
+
+# ── R2 PDF URL ──
+# After uploading the PDF to Cloudflare R2, set this variable
+# to the public R2 URL, e.g.:
+#   https://pub-xxxxx.r2.dev/RongBao_Product_Catalog_2026.pdf
+[vars]
+PDF_URL = "REPLACE_WITH_R2_PDF_URL"
